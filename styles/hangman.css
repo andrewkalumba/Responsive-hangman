@@ -3,9 +3,9 @@
 }
 
 html {
-	max-height: 100vh;
-	padding: 0;
-	margin: 0 auto;
+  max-height: 100vh;
+  padding: 0;
+  margin: 0 auto;
   background: #000411;
   font-family: 'Georgia', 'Calibri';
   font-size: 1.2rem;
@@ -13,20 +13,26 @@ html {
 }
 
 body {
-	max-height: 100%;
+  max-height: 100%;
   background: #000411;
   font-family: 'Georgia', 'Calibri';
   font-size: 1.2rem;
   margin-top: 10px;
 }
 
-div, img, article, footer, header, menu, section {
-	padding: 0;
-	margin: 0 auto;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+div,
+img,
+article,
+footer,
+header,
+menu,
+section {
+  padding: 0;
+  margin: 0 auto;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 .game-container {
@@ -304,8 +310,8 @@ div, img, article, footer, header, menu, section {
   }
 
   .game-stats {
-   background-color: #FFFFFF;
-   padding: 16px;
-   display: inline-block;
+    background-color: #FFFFFF;
+    padding: 16px;
+    display: inline-block;
   }
 }
