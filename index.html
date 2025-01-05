@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="./styles/hangman.css">
+    <script src="./scripts/jquery-3.7.1.min.js"></script>
+    <script src="./scripts/hangman.js" defer></script>
+</head>
+
+<body>
+    <div class="game-container">
+        <header class="start-game">
+            <button class="start-button">Click to play</button>
+
+            <div class="picture">
+                <img src="./image/hangman_pic3.jpg" alt="Hangman-Picture">
+            </div>
+        </header>
+
+        <section class="playground">
+            <article class="word"></article>
+
+            <article class="centered">
+                <article class="letters"></article>
+
+                <article class="hangman">
+                    <div class="basis"></div>
+                    <div class="gibbet"></div>
+                    <div class="rope"></div>
+                    <div class="head"></div>
+                    <div class="body"></div>
+                    <div class="limbs hands"></div>
+                    <div class="limbs legs"></div>
+                </article>
+            </article>
+
+            <div class="game-stats">
+                <div class="wins">Wins: <span id="wins-count">0</span></div>
+                <div class="losses">Losses: <span id="losses-count">0</span></div>
+                <div class="total-games">Total Games: <span id="total-games-count">0</span></div>
+            </div>
+
+            <aside class="new-game">
+                <p class="message"></p>
+                <p>New game?</p>
+                <div id="answer">
+                    <button id="yes">YES</button> 
+                    <button id="no">NO</button>
+                </div>
+            </aside>
+        </section>
+
+        <footer class="end-game">
+            <span>Thank You for playing!</span>
+
+            <div class="picture">
+                <img src="./image/hangman_pic2.jpg" alt="Hangman-Picture2">
+            </div>
+
+        </footer>
+    </div>
+</body>
+
+</html>

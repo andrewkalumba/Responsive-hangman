@@ -1,0 +1,311 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+	max-height: 100vh;
+	padding: 0;
+	margin: 0 auto;
+  background: #000411;
+  font-family: 'Georgia', 'Calibri';
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+body {
+	max-height: 100%;
+  background: #000411;
+  font-family: 'Georgia', 'Calibri';
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+div, img, article, footer, header, menu, section {
+	padding: 0;
+	margin: 0 auto;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+.game-container {
+  background: #555555;
+  border: 6px solid #959595;
+  border-radius: 6%;
+  margin: 0 auto;
+  text-align: center;
+  width: 80vw;
+  height: 94vh;
+}
+
+/* <header class="start-game"> */
+
+.start-game {
+  margin-top: 50px;
+  width: 80vw;
+  height: 94vh;
+}
+
+.start-button {
+  background: #DDDDDD;
+  border: 6px solid #959595;
+  width: 40%;
+  height: 20%;
+  color: #001524;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 16px;
+}
+
+.start-button:hover {
+  background: #959595;
+  border: 6px solid #DDDDDD;
+  color: #EEEDEB;
+}
+
+.picture {
+  padding-top: 40px;
+}
+
+.picture img {
+  border-radius: 6%;
+  max-width: 300px;
+  height: auto;
+}
+
+/*  end of header.start-game 
+      <section class="playground"> */
+
+.playground {
+  margin: 0 auto;
+  padding-top: 20px;
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+
+/* <article class="word"> */
+
+.word>div {
+  background: #00AEEF;
+  border: 2px solid #FFFFFF;
+  display: inline-block;
+  margin: 5px;
+  padding: 16px;
+  border-radius: 16px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/*  end of .word
+      <article class="centered"> */
+
+.centered {
+  display: inline-block;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.letters,
+.hangman {
+  padding: 16px;
+}
+
+.letters {
+  margin: 6px 6px 0px 6px;
+}
+
+.letters>button {
+  border: 2px solid #EEEDEB;
+  background: #000000;
+  border-radius: 16px;
+  margin: 5px;
+  width: 50px;
+  height: 50px;
+  font-size: 1rem;
+  color: #EEEDEB;
+}
+
+.letters>button:hover {
+  background-color: #FFFFFF;
+}
+
+.hangman {
+  border: 2px solid #001524;
+  border-radius: 16px;
+  background: #00AEEF;
+  width: 300px;
+  height: 300px;
+  margin: 12px 6px;
+  display: inline-block;
+  position: relative;
+}
+
+.basis {
+  border-bottom: 10px solid #001524;
+  position: absolute;
+  bottom: 20px;
+  left: 26px;
+  display: none;
+  width: 120px;
+}
+
+.gibbet {
+  border-left: 10px solid #001524;
+  border-top: 10px solid #001524;
+  position: absolute;
+  bottom: 20px;
+  left: 60px;
+  display: none;
+  width: 140px;
+  height: 250px;
+}
+
+.rope {
+  border-right: 10px solid #001524;
+  position: absolute;
+  top: 30px;
+  left: 160px;
+  display: none;
+  width: 40px;
+  height: 40px;
+}
+
+.head {
+  border: 10px solid #001524;
+  border-radius: 50%;
+  position: absolute;
+  left: 165px;
+  top: 69px;
+  display: none;
+  width: 60px;
+  height: 60px;
+}
+
+.body {
+  border-right: 10px solid #001524;
+  position: absolute;
+  left: 120px;
+  top: 120px;
+  display: none;
+  width: 80px;
+  height: 80px;
+}
+
+.limbs {
+  border-right: 10px solid #001524;
+  border-top: 10px solid #001524;
+  position: absolute;
+  transform: rotate(-45deg);
+  width: 60px;
+  height: 60px;
+}
+
+.hands {
+  display: none;
+  left: 165px;
+  top: 150px;
+}
+
+.legs {
+  display: none;
+  left: 165px;
+  top: 195px;
+}
+
+.new-game,
+.end-game {
+  display: none;
+}
+
+.new-game {
+  background: #555555;
+  border: 4px solid #EEEDEB;
+  position: fixed;
+  top: 26%;
+  left: 25%;
+  width: 50vw;
+  padding: 16px;
+  border-radius: 16px;
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.message {
+  margin-top: 20px;
+}
+
+#yes,
+#no {
+  border: 4px solid #EEEDEB;
+  background: #959595;
+  padding: 8px;
+  margin: 25px;
+  color: #EEEDEB;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 16px;
+}
+
+#yes:hover {
+  background: #008000;
+  color: #000000;
+}
+
+#no:hover {
+  background: #610f05;
+  color: #000000;
+}
+
+.end-game {
+  margin-top: 50px;
+  color: #EEEDEB;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .start-game {
+    width: 80vw;
+    height: 50vh;
+  }
+
+  .start-button {
+    width: 60%;
+    height: 30%;
+  }
+
+  .picture img {
+    width: 40%;
+    height: auto;
+  }
+
+  .game-container {
+    border-radius: 16px;
+    margin: 0 auto;
+    text-align: center;
+    height: 94vh;
+    background-color: transparent;
+    border: none;
+    width: unset;
+  }
+
+  .letters>button {
+    border: 2px solid #EEEDEB;
+    background: #000000;
+    border-radius: 16px;
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.4rem;
+    color: #EEEDEB;
+  }
+
+  .game-stats {
+   background-color: #FFFFFF;
+   padding: 16px;
+   display: inline-block;
+  }
+}
