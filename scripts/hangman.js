@@ -98,13 +98,13 @@ $(document).ready(function () {
 
     function updateHangman(counter) {
         switch (counter) {
-            case 1: $('.basis').fadeIn(500); break;
-            case 2: $('.gibbet').fadeIn(500); break;
-            case 3: $('.rope').fadeIn(500); break;
-            case 4: $('.head').fadeIn(500); break;
-            case 5: $('.body').fadeIn(500); break;
-            case 6: $('.hands').fadeIn(500); break;
-            case 7: $('.legs').fadeIn(500); break;
+            case 1: $('.basis').fadeIn(700); break;
+            case 2: $('.gibbet').fadeIn(700); break;
+            case 3: $('.rope').fadeIn(700); break;
+            case 4: $('.head').fadeIn(700); break;
+            case 5: $('.body').fadeIn(700); break;
+            case 6: $('.hands').fadeIn(700); break;
+            case 7: $('.legs').fadeIn(700); break;
         }
     }
 
