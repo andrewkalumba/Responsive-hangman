@@ -84,7 +84,7 @@ $(document).ready(function () {
         });
     }
 
-    function updateHangman(counter) {
+    /*function updateHangman(counter) {
         switch (counter) {
             case 1: $('.basis').show(); break;
             case 2: $('.gibbet').show(); break;
@@ -93,6 +93,18 @@ $(document).ready(function () {
             case 5: $('.body').show(); break;
             case 6: $('.hands').show(); break;
             case 7: $('.legs').show(); break;
+        }
+    }*/
+
+    function updateHangman(counter) {
+        switch (counter) {
+            case 1: $('.basis').fadeIn(500); break;
+            case 2: $('.gibbet').fadeIn(500); break;
+            case 3: $('.rope').fadeIn(500); break;
+            case 4: $('.head').fadeIn(500); break;
+            case 5: $('.body').fadeIn(500); break;
+            case 6: $('.hands').fadeIn(500); break;
+            case 7: $('.legs').fadeIn(500); break;
         }
     }
 
