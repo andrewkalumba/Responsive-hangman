@@ -1,4 +1,4 @@
-const playground = $('.playground'); // jQuery shortcut
+const playground = $('.playground'); // jQuery shortcut same as document.querySelector() in js
 const message = $('.message');
 const wordDisplay = $('.word');
 const winCount = $('#wins-count');
@@ -17,7 +17,7 @@ $(document).ready(function () {
 
         this.createLetterDivs = function () {
             for (let i = 0; i < this.length; i++) {
-                wordDisplay.append('<div class="letter-' + i + '">' + '*' + '</div>');
+                wordDisplay.append('<div class="letter-' + i + '">' + '_' + '</div>');
             }
         };
 
@@ -62,7 +62,7 @@ $(document).ready(function () {
                 const displayedWord = wordDisplay.html();
 
                 // Player wins
-                if (!displayedWord.includes('*')) {
+                if (!displayedWord.includes('_')) {
                     displayEndGameMessage('Congrats, You win!', true);
                     return;
                 }
@@ -83,18 +83,6 @@ $(document).ready(function () {
             });
         });
     }
-
-    /*function updateHangman(counter) {
-        switch (counter) {
-            case 1: $('.basis').show(); break;
-            case 2: $('.gibbet').show(); break;
-            case 3: $('.rope').show(); break;
-            case 4: $('.head').show(); break;
-            case 5: $('.body').show(); break;
-            case 6: $('.hands').show(); break;
-            case 7: $('.legs').show(); break;
-        }
-    }*/
 
     function updateHangman(counter) {
         switch (counter) {
