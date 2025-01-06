@@ -1,17 +1,18 @@
-const playground = $('.playground'); // jQuery shortcut same as document.querySelector() in js
-const message = $('.message');
-const wordDisplay = $('.word');
-const winCount = $('.wins-count');
-const lossCount = $('.losses-count');
-const totalGame = $('.total-games-count');
-const livesCount = $('.lives-count'); // Display for lives
+/*$(document).ready(function () {*/
+$(() => { //new way of writing functions 
+    const playground = $('.playground'); // jQuery shortcut same as document.querySelector() in js
+    const message = $('.message');
+    const wordDisplay = $('.word');
+    const winCount = $('.wins-count');
+    const lossCount = $('.losses-count');
+    const totalGame = $('.total-games-count');
+    const livesCount = $('.lives-count'); // Display for lives
 
-let wins = 0;
-let losses = 0;
-let totalGames = 0;
-let remainingLives = 7; // Total lives available
+    let wins = 0;
+    let losses = 0;
+    let totalGames = 0;
+    let remainingLives = 7; // Total lives available
 
-$(document).ready(function () {
     // Function to create the word display
     function Word(word) {
         this.word = word;
@@ -47,6 +48,7 @@ $(document).ready(function () {
     $('.start-button').click(startGame);
 
     function startGame() {
+        /*const startGame = () => {*/
         $('.start-game').hide();
         playground.show();
         remainingLives = 7; // Reset lives when starting a new game
@@ -90,7 +92,8 @@ $(document).ready(function () {
         });
     }
 
-    function updateHangman(counter) {
+    /*function updateHangman(counter) {*/
+    const updateHangman = (counter) => {
         switch (counter) {
             case 1: $('.basis').fadeIn(700); break;
             case 2: $('.gibbet').fadeIn(700); break;
@@ -102,7 +105,8 @@ $(document).ready(function () {
         }
     }
 
-    function displayEndGameMessage(msg, isWin) {
+    /*function displayEndGameMessage(msg, isWin) {*/
+    const displayEndGameMessage = (msg, isWin) => {
         $('.new-game').css('display', 'block');
         message.css('display', 'block').text(msg);
         if (isWin) {
@@ -115,7 +119,8 @@ $(document).ready(function () {
         setupNewGameCallbacks();
     }
 
-    function setupNewGameCallbacks() {
+    /*function setupNewGameCallbacks() {*/
+    const setupNewGameCallbacks = () => {
         $("#yes").off('click').click(function () {
             resetGame();
             startGame();
