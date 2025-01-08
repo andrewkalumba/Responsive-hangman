@@ -24,7 +24,7 @@ $(() => { //new way of writing functions
             }
         };
 
-        this.showLetterIfIsRight = function (letter) {
+        this.showLetterIfIsRight = letter => {
             let letterFound = false;
             for (let i = 0; i < this.length; i++) {
                 if (letter === this.word[i]) {
@@ -45,9 +45,9 @@ $(() => { //new way of writing functions
         $('.letters').append('<button class="letter-for-click">' + char + '</button>');
     }
 
-    $('.start-button').click(startGame);
+   
 
-    function startGame() {
+    const startGame = () => {
         /*const startGame = () => {*/
         $('.start-game').hide();
         playground.show();
@@ -91,6 +91,8 @@ $(() => { //new way of writing functions
             });
         });
     }
+
+    $('.start-button').click(startGame);
 
     /*function updateHangman(counter) {*/
     const updateHangman = (counter) => {
